@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from 'antd';
 import { BaseComponentProps } from "../../base/BaseComponentProps";
 
 export default class LoginPage extends Component<BaseComponentProps> {
@@ -11,7 +12,7 @@ export default class LoginPage extends Component<BaseComponentProps> {
     return (
       <>
         <div>login</div>
-        <button onClick={this.toHome}>to home</button>
+        <Button onClick={this.toHome} type="primary">to home</Button>
       </>
     )
   }
