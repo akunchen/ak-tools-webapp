@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
+import { Provider } from 'mobx-react';
 
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 import Layout from './layouts/Layout';
+import stores from './stores'
 
-ReactDOM.render(<HashRouter><Layout /></HashRouter>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider {...stores}>
+    <HashRouter>
+      <Layout />
+    </HashRouter>
+  </Provider>
+  ,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
