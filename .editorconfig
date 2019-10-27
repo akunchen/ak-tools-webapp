@@ -1,2 +1,2 @@
-[*.{ts,tsx,js}]
+[*.{ts,tsx,js,less}]
 indent_size = 2
